@@ -2,31 +2,39 @@
 
 import UIKit
 import Darwin
+import Foundation
 
-func judgetri(a:Int, b:Int, c:Int) -> String{
-    while a<=0||b<=0||c<=0{
-        print(0);
-        break;
+var i:Int;
+var j:Int;
+var n:Int;
+for n in 0..<3{
+    for i in 0..<3{
+        while i<=n{
+            print(" ",terminator: " ");
+            break;
+        }
     }
-    while a>0 && b>0 && c>0{
-        if a+b<2*c{
-            print(0)
+    for j in 0..<(-2)*n+5{
+        while j<=(-2)*n+7{
+            print("*",terminator: " ");
+            break;
         }
-        if a+b>2*c{
-            if a==b||a==c||b==c{
-                print(2);
-            }
-            else {
-                print(3);
-            }
-        }
-        if a+b==2*c{
-            print(1);
-        }
-        break;
     }
-    return "以上是判断结果";
+    print(" ");
 }
-
-print(judgetri(a: -2, b:2, c: 2));
+for n in 3..<5{
+    for i in 4..<6{
+        while i>n{
+            print(" ",terminator: " ");
+            break;
+        }
+    }
+    for j in 0..<2*n-3{
+        while j<=2*n-3{
+            print("*",terminator: " ");
+            break;
+        }
+    }
+    print(" ");
+}
 
